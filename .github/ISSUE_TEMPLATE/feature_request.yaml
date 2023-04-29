@@ -1,0 +1,27 @@
+name: ✨ Feature Request
+description: Request a feature
+title: "[Feature Request] "
+labels: ["enhancement"]
+body:
+    - type: input
+      id: short-desc
+      attributes:
+          label: Short description
+          description: Please give a short description of your feature
+      validations:
+          required: true
+    - type: markdown
+      id: long-desc
+      attributes:
+          label: Long description / more information
+          description: Please provide a long description / more information if applicable
+      validations:
+          required: false
+    - type: checkboxes
+      id: check
+      attributes:
+          label: Review
+          description: By submitting this feature request, you confirm an issue regarding this feature doesn't already exist
+          options:
+              - label: No similar feature request does already exist
+                required: true
