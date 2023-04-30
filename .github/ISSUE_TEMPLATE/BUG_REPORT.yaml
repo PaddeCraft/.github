@@ -36,7 +36,7 @@ body:
           label: Operating system
           description: What operating system are you using? On linux you can use the command `uname -a` to get the exact version.
           placeholder: ex. Arch Linux 6.1.10-arch1-1
-      validation:
+      validations:
           required: true
     - type: textarea
       id: logs
@@ -44,14 +44,14 @@ body:
           label: Logs / Crash reports
           description: Please copy-paste relevant logs and crash reports here if applicable
           render: shell
-      validation:
+      validations:
           required: false
     - type: textarea
       id: fix_idea
       attributes:
           label: Ideas how to fix
           description: If you have any idea, what the cause of this bug is, or even an idea on how/where to fix it, please add in in the text box below.
-      validation:
+      validations:
           required: false
     - type: checkboxes
       id: check
