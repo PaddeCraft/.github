@@ -1,63 +1,69 @@
+---
 name: 🐛 Bug Report
 description: File a bug report
 title: "[Bug] "
-labels: ["bug"]
+labels:
+  - bug
 body:
-    - type: markdown
-      attributes:
-          value: |
-              Thanks for taking the time to fill out this bug report!
-    - type: input
-      id: short-desc
-      attributes:
-          label: Short description
-          description: Please give a short description of your issue
-          placeholder: ex. The app is crashing when clicking x
-      validations:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for taking the time to fill out this bug report!
+  - type: input
+    id: short-desc
+    attributes:
+      label: Short description
+      description: Please give a short description of your issue
+      placeholder: ex. The app is crashing when clicking x
+    validations:
+      required: true
+  - type: markdown
+    id: long-desc
+    attributes:
+      label: Long description / more information
+      description: Please provide a long description / more information if applicable.
+        You can also attach screenshots here if you want.
+      placeholder: ex. This only happens when option x > y is enabled
+    validations:
+      required: false
+  - type: input
+    id: version
+    attributes:
+      label: Version
+      description: What version of the software are you running?
+    validations:
+      required: true
+  - type: input
+    id: operating-system
+    attributes:
+      label: Operating system
+      description: What operating system are you using? On linux you can use the
+        command `uname -a` to get the exact version.
+      placeholder: ex. Arch Linux 6.1.10-arch1-1
+    validations:
+      required: true
+  - type: textarea
+    id: logs
+    attributes:
+      label: Logs / Crash reports
+      description: Please copy-paste relevant logs and crash reports here if applicable
+      render: shell
+    validations:
+      required: false
+  - type: textarea
+    id: fix_idea
+    attributes:
+      label: Ideas how to fix
+      description: If you have any idea, what the cause of this bug is, or even an
+        idea on how/where to fix it, please add in in the text box below.
+    validations:
+      required: false
+  - type: checkboxes
+    id: check
+    attributes:
+      label: Review
+      description: By submitting this issue, you confirm this information is correct
+        and your issue doesn't already exist
+      options:
+        - label: My information is correct, and this issue doesn't already exist
           required: true
-    - type: markdown
-      id: long-desc
-      attributes:
-          label: Long description / more information
-          description: Please provide a long description / more information if applicable. You can also attach screenshots here if you want.
-          placeholder: ex. This only happens when option x > y is enabled
-      validations:
-          required: false
-    - type: input
-      id: version
-      attributes:
-          label: Version
-          description: What version of the software are you running?
-      validations:
-          required: true
-    - type: input
-      id: operating-system
-      attributes:
-          label: Operating system
-          description: What operating system are you using? On linux you can use the command `uname -a` to get the exact version.
-          placeholder: ex. Arch Linux 6.1.10-arch1-1
-      validations:
-          required: true
-    - type: textarea
-      id: logs
-      attributes:
-          label: Logs / Crash reports
-          description: Please copy-paste relevant logs and crash reports here if applicable
-          render: shell
-      validations:
-          required: false
-    - type: textarea
-      id: fix_idea
-      attributes:
-          label: Ideas how to fix
-          description: If you have any idea, what the cause of this bug is, or even an idea on how/where to fix it, please add in in the text box below.
-      validations:
-          required: false
-    - type: checkboxes
-      id: check
-      attributes:
-          label: Review
-          description: By submitting this issue, you confirm this information is correct and your issue doesn't already exist
-          options:
-              - label: My information is correct, and this issue doesn't already exist
-                required: true
