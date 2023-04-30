@@ -13,8 +13,10 @@ body:
     id: short-desc
     attributes:
       label: Short description
-      description: Please give a short description of your issue
-      placeholder: ex. The app is crashing when clicking x
+      description: |
+        Please give a short description of your issue
+      placeholder: |
+        ex. The app is crashing when clicking x
     validations:
       required: true
   - type: markdown
